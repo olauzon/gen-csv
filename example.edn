@@ -1,0 +1,18 @@
+{
+  ;; see https://github.com/clojure/data.generators/blob/master/src/main/clojure/clojure/data/generators.clj
+  :data [
+    (gen/uuid)
+    (+ 40 (rand-int 60))
+    (gen/date)
+    (gen/one-of "a" "b" "c" "d")
+    (gen/boolean)
+    (gen/short)
+    (gen/int)
+    (gen/long)
+    (gen/string)
+    (gen/long)
+    10
+  ]
+  :output-file "hello.csv"
+  :lines 10
+}
