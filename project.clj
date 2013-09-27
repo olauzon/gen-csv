@@ -1,6 +1,6 @@
-(defproject gen-csv "0.1.0-SNAPSHOT"
+(defproject gen-csv "0.2.0-SNAPSHOT"
   :description "Generate \"random\" CSV files"
-  :url "https://github.com/olauzon/csv-gen"
+  :url "https://github.com/olauzon/gen-csv"
   :license {:name "Eclipse Public License"
             :url "http://www.eclipse.org/legal/epl-v10.html"}
   :dependencies [
@@ -9,6 +9,7 @@
     [org.clojure/data.csv        "0.1.2"]
     [org.clojure/data.generators "0.1.2"]
     [org.clojure/tools.reader    "0.7.5"]
-    [clj-time                    "0.4.5"]
+    [clj-time                    "0.6.0"]
     [me.raynes/fs                "1.4.0"]]
-  :main gen-csv.core)
+  :main gen-csv.core
+  :aot :all)

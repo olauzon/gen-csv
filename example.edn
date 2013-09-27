@@ -4,6 +4,11 @@
     (gen/uuid)
     (+ 40 (rand-int 60))
     (gen/date)
+    (ct/minus (ct/now)
+      (ct/months  (rand-int  3))
+      (ct/days    (rand-int 32))
+      (ct/hours   (rand-int 25))
+      (ct/minutes (rand-int 61)))
     (gen/one-of "a" "b" "c" "d")
     (gen/boolean)
     (gen/short)
@@ -15,4 +20,5 @@
   ]
   :output-file "hello.csv"
   :lines 10
+  :separator \, ;; or \tab (default)
 }

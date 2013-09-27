@@ -4,9 +4,12 @@
            [clojure.java.io          :as io]
            [clojure.data.csv         :as csv]
            [clojure.data.generators  :as gen]
-           [clj-time.format          :as tf]
+           [clj-time.core            :as ct]
+           [clj-time.format          :as ct-format]
+           [clj-time.periodic        :as ct-periodic]
            [clojure.tools.reader.edn :as edn]
-           [me.raynes.fs             :as fs]))
+           [me.raynes.fs             :as fs])
+  (:gen-class))
 
 (def file-path
   (atom "example.edn"))
@@ -20,7 +23,6 @@
   (memo/memo #(edn/read-string (raw @file-path))))
 
 (defn reset-file-path!
-  ""
   [path]
   (do
     (reset! file-path path)
@@ -33,7 +35,7 @@
     (csv/write-csv wtr [data]
       :newline   :cr+lf
       :quote     \"
-      :separator \tab)))
+      :separator ((config) :separator \tab))))
 
 (defn data
   []
