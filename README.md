@@ -9,7 +9,7 @@ A Clojure utility for generating "random" CSV files.
 Usage
 -----
 
-### Write 10 randomly generated rows to `hello.csv`
+### Write 10 randomly generated CSV rows
 
 
 ```bash
@@ -38,7 +38,7 @@ lein run example.edn
 }
 ```
 
-#### Example output in `hello.csv`
+#### Example output in `example.csv`
 
 ```csv
 ba419d35-0dfe-8af7-aee7-bbe10c45c028,72,Sun Jun 01 04:11:11 EDT 2014,2013-07-02T11:30:32.479Z,c,true,-26783,-209348649,7040072382879853816,h~.Ixk.@7B/:]'(k>2,204137701428793873,10
@@ -59,7 +59,6 @@ d70173c0-1519-0d55-7b04-ab9756cf7cc3,79,Sun Jun 12 14:33:33 EDT 2011,2013-09-10T
 License
 -------
 
-Copyright ©2013 Olivier Lauzon
+Copyright © 2013 Olivier Lauzon
 
-Distributed under the Eclipse Public License either version 1.0 or (at
-your option) any later version.
+Distributed under the Eclipse Public License.
